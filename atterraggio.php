@@ -1,7 +1,7 @@
 <?php
 
 $paragrafo = $_GET['paragrafo'];
-$parolaDaCensurare = $_GET['parola da censurare']
+$parola = $_GET['parola']
 
 ?>
 
@@ -16,7 +16,19 @@ $parolaDaCensurare = $_GET['parola da censurare']
 </head>
 <body>
   <h1> 
-    Ciao <?php $paragrafo ?>  <?php $parolaDaCensurare ?>
+    <?php 
+    
+     echo $paragrafo 
+     echo 'Il paragrafo è lungo' . strlen($paragrafo) . ' caratteri'.
+    
+    
+    ?>  
+    
+    <?php 
+     str_replace($parola,'***', $paragrafo);
+      echo $paragrafo 
+      echo 'Il paragrafo è lungo' . strlen($paragrafo) . ' caratteri'.
+    ?>
 
   </h1>
   
