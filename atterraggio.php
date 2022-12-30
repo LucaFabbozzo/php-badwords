@@ -21,14 +21,18 @@ if (isset($_GET['badword'])) {
 }
 
 
+
 if(isset($_GET['badword'])) {
-   $pragrafo_corretto = str_replace($_GET['badword'], '***' ,$_GET['paragraph']);
+   $paragrafo_corretto = str_replace($_GET['badword'], '***' ,$_GET['paragraph']);
 } else {
-  $pragrafo_corretto = '';
+  $paragrafo_corretto = '';
 }
 
 
 ?>
+
+
+
 
 
 <!DOCTYPE html>
@@ -48,8 +52,8 @@ if(isset($_GET['badword'])) {
   <p><?php echo $paragraph ?></p>
   <h3>Questo paragrafo è lungo <?php echo strlen($paragraph) ?> </h3>
   <h2>Paragrafo corretto</h2>
-  <p><?php echo $pragrafo_corretto ?></p>
-  <h3>Questo paragrafo è lungo <?php echo strlen($pragrafo_corretto) ?> </h3>
+  <p><?php echo $paragrafo_corretto ?></p>
+  <h3>Questo paragrafo è lungo <?php echo strlen($paragrafo_corretto) ?> </h3>
 </div>
   
 </body>
